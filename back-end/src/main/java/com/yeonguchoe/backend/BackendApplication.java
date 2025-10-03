@@ -6,6 +6,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class BackendApplication {
 	public static void main(String[] args) {
-		SpringApplication.run(BackendApplication.class, args);
+		// SpringApplication.run(BackendApplication.class, args);
+		var orderService = new OrderService();
+		orderService.setPaymentService(new StripePaymentService());
+		orderService.placeOrder();
 	}
 }
