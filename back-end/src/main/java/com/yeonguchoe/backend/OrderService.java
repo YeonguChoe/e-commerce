@@ -1,11 +1,13 @@
 package com.yeonguchoe.backend;
 
+import org.springframework.stereotype.Service;
+
+@Service
 public class OrderService {
     private PaymentService paymentService;
 
-    // Dependency injection
-    public OrderService() {
-        // this.paymentService = paymentService;
+    public OrderService(PaymentService paymentService) {
+        this.paymentService = paymentService;
     }
 
     public void placeOrder() {

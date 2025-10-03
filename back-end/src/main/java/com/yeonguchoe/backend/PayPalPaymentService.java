@@ -1,5 +1,8 @@
 package com.yeonguchoe.backend;
 
+import org.springframework.stereotype.Service;
+
+@Service
 public class PayPalPaymentService implements PaymentService {
 
     @Override
